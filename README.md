@@ -12,13 +12,12 @@
 <a href="https://www.linkedin.com/in/alex-zhao-a28b12176/" target="_blank">Alex Zhao</a>,
 <a href="https://profiles.stanford.edu/judith-fan" target="_blank">Judith E Fan</a>,
 <a href="https://groups.csail.mit.edu/vision/torralbalab/" target="_blank">Antonio Torralba</a>
-</p>
-
-Interface created by Dingning Cao
 
 > <br>
 >  SketchAgent leverages an off-the-shelf multimodal LLM to facilitate language-driven, sequential sketch generation through an intuitive sketching language. It can sketch diverse concepts, engage in interactive sketching with humans, and edit content via chat.
 </p>
+
+<a href="[https://github.com/yourusername](https://sites.google.com/milton.edu/dingning-cao-portfolio/about-me)" target="_blank">Interactive Interface by Dingning Cao</a>
 
 
 ## Overview
