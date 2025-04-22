@@ -17,7 +17,7 @@
 >  SketchAgent leverages an off-the-shelf multimodal LLM to facilitate language-driven, sequential sketch generation through an intuitive sketching language. It can sketch diverse concepts, engage in interactive sketching with humans, and edit content via chat.
 </p>
 
-<a href="[https://github.com/yourusername](https://sites.google.com/milton.edu/dingning-cao-portfolio/about-me)" target="_blank">Interactive Interface by Dingning Cao</a>
+<a href="https://sites.google.com/milton.edu/dingning-cao-portfolio/about-me" target="_blank" style="color: blue; text-decoration: underline;"><strong>Interactive Interface by Dingning Cao</strong></a>
 
 
 ## Overview
