@@ -1,7 +1,6 @@
 # SketchAgent: Language-Driven Sequential Sketch Generation
 
 <a href="https://yael-vinker.github.io/sketch-agent/"><img src="https://img.shields.io/static/v1?label=Project&message=Website&color=blue"></a>
-<a href="https://arxiv.org/abs/2411.17673"><img src="https://img.shields.io/badge/arXiv-2311.13608-b31b1b.svg"></a>
 <a href="https://www.apache.org/licenses/LICENSE-2.0.txt"><img src="https://img.shields.io/badge/License-Apache-yellow"></a>
 
 <br>
