@@ -209,18 +209,38 @@ def save_sketch(model_strokes_svg, output_path, add_object, init_canvas):
     with open(f"{output_path}/output_{add_object}.svg", "w") as svg_file:
         svg_file.write(model_strokes_svg)
 
-    # save the result also without the canvas background
-    cairosvg.svg2png(url=f"{output_path}/output_{add_object}.svg", write_to=f"{output_path}/output_{add_object}.png", background_color="white")
+    # Save the result with clean white background (no grid)
+    cairosvg.svg2png(url=f"{output_path}/output_{add_object}.svg",
+                     write_to=f"{output_path}/output_{add_object}.png",
+                     background_color="white")
 
     if init_canvas is not None:
-        # save the result as png on the canvas background
+        # For the canvas version, create a blank white canvas instead of using the grid
         output_png_path = f"{output_path}/output_{add_object}_canvas.png"
+
+        # Create a blank white image with the same dimensions as init_canvas
+        blank_canvas = Image.new('RGB', init_canvas.size, 'white')
+
+        # Convert SVG to PNG and overlay on blank canvas
         cairosvg.svg2png(url=f"{output_path}/output_{add_object}.svg", write_to=output_png_path)
         foreground = Image.open(output_png_path)
-        init_canvas_copy = init_canvas.copy()
-        init_canvas_copy.paste(Image.open(output_png_path), (0, 0), foreground)
-        init_canvas_copy.save(output_png_path)
-        return init_canvas_copy
+        blank_canvas.paste(foreground, (0, 0), foreground)
+        blank_canvas.save(output_png_path)
+
+        return blank_canvas
+
+    # # save the result also without the canvas background
+    # cairosvg.svg2png(url=f"{output_path}/output_{add_object}.svg", write_to=f"{output_path}/output_{add_object}.png", background_color="white")
+
+    # if init_canvas is not None:
+    #     # save the result as png on the canvas background
+    #     output_png_path = f"{output_path}/output_{add_object}_canvas.png"
+    #     cairosvg.svg2png(url=f"{output_path}/output_{add_object}.svg", write_to=output_png_path)
+    #     foreground = Image.open(output_png_path)
+    #     init_canvas_copy = init_canvas.copy()
+    #     init_canvas_copy.paste(Image.open(output_png_path), (0, 0), foreground)
+    #     init_canvas_copy.save(output_png_path)
+    #     return init_canvas_copy
 
 class SketchApp:
     def __init__(self, args):
